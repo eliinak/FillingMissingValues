@@ -14,7 +14,7 @@ def fill_missing_program(missing_column, dependent_column, color):
 if __name__ == '__main__':
 
     # loading data set
-    df = pd.read_csv('D:/daya/3 курс, 2 семестър/ПИИ/courseProject/netflix.csv')
+    df = pd.read_csv('netflix.csv')
 
     # deleting empty countries
     empty_country_rows = df[df['Country'].isnull()]
@@ -85,6 +85,6 @@ if __name__ == '__main__':
             print(colored('Filling premium cost in row ' + repr(index) + ' with percentage dependence '
                           + repr(percentage_dif_bs_st) + ' and value ' + repr(result_val_premium), 'grey'))
 
-    df.to_csv('D:/daya/3 курс, 2 семестър/ПИИ/courseProject/netflix_filled.csv')
+    df.to_csv('netflix_filled.csv')
 
-    df_original = pd.read_csv('D:/daya/3 курс, 2 семестър/ПИИ/courseProject/netflix.csv')
+    df_original = pd.read_csv('netflix.csv')
